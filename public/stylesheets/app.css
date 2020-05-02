@@ -1,0 +1,36 @@
+body {
+  background-color: #393f4d;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  background-color: white;
+}
+
+.pageHeader {
+  font-weight: 700;
+}
+.fa-arrow-alt-circle-right {
+  font-size: 1.5em;
+}
+
+.container.main {
+  margin-top: 7em;
+}
+
+.newForm {
+  max-width: 800px;
+}
+
+.userForm {
+  background-color: #282828;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 3px 5px 6px black;
+}
+
+#delete {
+  display: inline;
+}

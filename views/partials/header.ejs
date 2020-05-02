@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Employee Management</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+
+    <script
+      src="https://kit.fontawesome.com/d814455781.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#collapse_target"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <a class="navbar-brand" href="/"><i class="far fa-address-card"></i></a>
+        <span class="navbar-text">Employee Management System</span>
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="/employees/new">Add New</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <% if(!currentUser){%>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="/register">Sign Up</a>
+          </li>
+          <% }else{ %>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#"
+              >Signed In As <%= currentUser.username %></a
+            >
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          <% }%>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

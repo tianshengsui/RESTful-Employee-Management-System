@@ -1,0 +1,49 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container mt-5 newForm">
+  <h1 class="display-4 pageHeader">New Employee</h1>
+  <hr />
+  <form action="/employees" method="POST">
+    <div class="form-group mb-4">
+      <label>Name</label>
+      <input
+        class="form-control"
+        type="text"
+        name="employee[name]"
+        placeholder="Name"
+      />
+    </div>
+
+    <div class="form-group mb-4">
+      <label>Department</label>
+      <input
+        class="form-control"
+        type="text"
+        name="employee[department]"
+        placeholder="Department"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label>Email</label>
+      <input
+        class="form-control"
+        type="email"
+        name="employee[email]"
+        placeholder="Email"
+      />
+    </div>
+    <div class="form-group mb-4">
+      <label>Phone</label>
+      <input
+        class="form-control"
+        type="text"
+        name="employee[phone]"
+        placeholder="Phone"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container main text-center">
+  <h1 class="display-5 pageHeader">Employee Management System</h1>
+  <table class="table table-dark table-striped table-hover mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% employees.forEach(employee =>{ %>
+      <tr>
+            <th scope='row'><%= employee.name %></th>
+            <td><%= employee.department%></p>
+            <td><%= employee.email%></td>
+            <td><%= employee.phone%></td>
+            <td><%= employee.created.toDateString() %></td>
+            <td><a href="/employees/<%=employee._id%>"><i class="far fa-arrow-alt-circle-right"></i></a></td>
+        <% });%>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<%- include('./partials/footer.ejs') %>

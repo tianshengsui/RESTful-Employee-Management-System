@@ -46,7 +46,7 @@ router.get("/employees/:id", middleware.isLoggedIn, (req, res) => {
   });
 });
 
-//edit
+//edit route
 router.get("/employees/:id/edit", middleware.isLoggedIn, (req, res) => {
   Employee.findById(req.params.id, (err, foundEmployee) => {
     if (err) {
